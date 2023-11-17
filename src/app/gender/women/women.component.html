@@ -1,0 +1,10 @@
+<app-navbar></app-navbar>
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="row">
+      <div class="col-md-3" *ngFor="let product of women">
+        <app-card [product]="product"></app-card>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+  <router-outlet></router-outlet>
