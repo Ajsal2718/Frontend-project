@@ -17,7 +17,7 @@ export class ViewProductComponent implements OnInit{
 
   ngOnInit(): void {
     let routeparam = this.active.snapshot.paramMap.get('id');
-    this.id=+routeparam
+    this.id = parseInt(routeparam)
     console.log(routeparam);
     this.serv.viewProducts(parseInt(routeparam));
     this.productdeteils = this.serv.prdcts;

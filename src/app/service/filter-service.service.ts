@@ -6,8 +6,8 @@ import { AllproductService } from './allproduct.service';
   providedIn: 'root'
 })
 export class FilterServiceService implements OnInit{
-  prdcts: ProductModel[]=[]; 
-  cartProduct:ProductModel[]=[]
+  prdcts: ProductModel[] = []; 
+  tocartProduct:ProductModel[] = [];
   constructor(private serve:AllproductService) { }
 
   ngOnInit(): void {
@@ -23,8 +23,13 @@ export class FilterServiceService implements OnInit{
   }
 
   cart(id:number){
-    this.cartProduct = this.serve.allProducts.filter(x=>x.id===id)
-    console.log(this.cartProduct);
-    
+    const cartProduct =  this.serve.allProducts.filter(x => x.id === id)
+    const productInCart = this.tocartProduct.find(x => x.id === id)
+    if(!productInCart){
+    this.tocartProduct.push(cartProduct[0])
+    alert("product added")
+    }else{
+      alert("Product exists")
+    }
   }
 }

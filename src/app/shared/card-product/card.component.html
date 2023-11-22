@@ -1,4 +1,4 @@
-<div class="card mt-4 me-5  cards" style="width: 280px; height: 350px;">
+<div class="card mt-4 me-5  cards" style="max-width: 280px; min-width: 280px; height: 400px;">
     <div>
       <a [routerLink]="'/view-product/'+(product.id)"><img style="height: 150px;" class="card-img-top w-100 image-products" [src]="product.img"></a>
       <div class="card-body">
@@ -6,9 +6,9 @@
         <h5>₹{{product.newPrice}}</h5>
         <h5><del>{{product. prevPrice}}</del></h5>
         <h5>{{product.category}}</h5>
-        <!-- <div>
-          <button class="btn btn-outline-warning" routerLink="/cart-page">ADD TO CART</button>
-        </div> -->
+        <div>
+          <button class="btn btn-outline-warning" [routerLink]="'/view-product/'+(product.id)">View Details</button>
+        </div>
       </div>
     </div>
   </div>

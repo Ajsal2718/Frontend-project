@@ -25,10 +25,6 @@ export class LoginComponent implements OnInit{
   onclick(){
     this.submit = true;
     this.serve.login(this.forms.value)
-    // if(this.forms.invalid){
-    //   return;
-    // }
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.forms.value,null,4));
   }
   // onRest(){
   //   this.submit = false;

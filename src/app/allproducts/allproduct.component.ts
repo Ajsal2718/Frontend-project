@@ -17,7 +17,4 @@ ngOnInit(): void {
   this.datas = this.serve.allProducts
   console.log(this.serve.allProducts);
 }  
-// addToCart(){
-//   this.serve.allProducts(this.)
-// }
 }

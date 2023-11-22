@@ -9,8 +9,8 @@ export const authGuard: CanActivateFn = () => {
     return true
   }
   else{
-    alert('No authrizide please signup');
+    alert('Not Authorized please signUp⚠️');
     route.navigate(['signup'])
-    return false
+    return false 
   }
 };

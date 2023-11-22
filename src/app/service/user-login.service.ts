@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { SignupModel } from '../model/signup-model';
 import { Router } from '@angular/router';
+import { ProductModel } from '../model/product';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,7 @@ import { Router } from '@angular/router';
 export class UserLoginService {
   signinValues: SignupModel[]=[];
   signupValues: SignupModel [] = [];
+  user: SignupModel[] = []
   showSearch : boolean = true;
   issignupcart : boolean = false;
   remove : boolean  = false;
@@ -19,20 +21,16 @@ export class UserLoginService {
     }
   }
 
-  // signUp() {
-  //   console.log(this.signinValues);
-    
-  //   localStorage.setItem('signupValues',JSON.stringify(this.signinValues))
-  // }
   signUp() {
     this.remove = true
     localStorage.setItem('signUpUsers', JSON.stringify(this.user))
     this.route.navigate(['userlogin'])
         alert('User SignedUp Successfully');
+        if(this.signupValues === this.signupValues){
+        }
   }
-  user: SignupModel[] = []
 
-  login(value:{username:string,password:string, Cart:[]}) {
+  login(value:{username:string,password:string}) {
     this.remove = false
     console.log(this.signupValues);
     
@@ -40,7 +38,7 @@ export class UserLoginService {
       return x.firstname === value.username && x.password === value.password
     })
     if(findperson.length == 0 || value.username === null || value.password === null){
-      alert('Your Not Signup ')
+      alert('Your Not Signup')
       this.issignupcart = false;
     }
     else{

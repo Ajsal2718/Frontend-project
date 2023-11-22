@@ -4,7 +4,7 @@
       aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#" ><img style="width: 50px; height: 50px;" src="../../../assets/images/shoe store logo - Made with PosterMyWall.png" alt=""></a>
+    <a class="navbar-brand" routerLink="/home"><img style="width: 50px; height: 50px;" src="../../../assets/images/shoe store logo - Made with PosterMyWall.png" alt=""></a>
 
     <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
       <ul class="navbar-nav">
@@ -29,6 +29,9 @@
       <a href="" routerLink="/signup" *ngIf="!onremove">SignUp</a>
       <a href="" routerLink="/login" *ngIf="!logout">Login</a>
       <a href="" routerLink="/login" *ngIf="logout">{{out}}</a>
+      <a href="" routerLink="/cart-page" *ngIf="logout"><i class="fa-solid fa-cart-shopping"></i></a>
+      <a href="" routerLink="/admin-login" *ngIf="logout"><i class="fa-solid fa-user-tie"></i></a>
+
     </form>
   </div>
 </nav>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { UserLoginService } from '../service/user-login.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -32,19 +32,9 @@ export class SignupComponent implements OnInit{
     this.srvc.signUp();
     this.route.navigate(['login']);
     // this.forms.reset();
-
-    
-
-   // stop here if form is invalid
-   if (this.forms.invalid) {
-       return;
    }
 
-   // display form values on success
-   alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.forms.value, null, 4));
-   }
-
-   onReset() {
-   this.submit = false;
-}
+//    onReset() {
+//    this.submit = false;
+// }
 }
