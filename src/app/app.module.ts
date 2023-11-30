@@ -17,6 +17,10 @@ import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { MatModule } from './mat/mat.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AdminUserComponent } from './admin/admin-user/admin-user.component';
+import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
+import { AddProductComponent } from './admin/add-product/add-product.component';
+import { EditPrdctsComponent } from './admin/edit-prdcts/edit-prdcts.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +34,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CartPageComponent,
     AdminLoginComponent,
     DashboardComponent,
+    AdminUserComponent,
+    AdminProductsComponent,
+    AddProductComponent,
+    EditPrdctsComponent,
 
   ],
   imports: [

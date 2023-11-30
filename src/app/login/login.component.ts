@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit{
 
   onclick(){
     this.submit = true;
-    this.serve.login(this.forms.value)
+    this.serve.login(this.forms.value);
   }
   // onRest(){
   //   this.submit = false;

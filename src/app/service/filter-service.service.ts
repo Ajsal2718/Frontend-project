@@ -14,7 +14,7 @@ export class FilterServiceService implements OnInit{
     
   }
 
-  viewProducts(id:number,paramType?:string){
+  viewProducts(id:number){
     let productView = this.serve.allProducts.filter((x) => {
       return x.id === id;
     })
@@ -29,7 +29,7 @@ export class FilterServiceService implements OnInit{
     this.tocartProduct.push(cartProduct[0])
     alert("product added")
     }else{
-      alert("Product exists")
+      alert("Product exists");
     }
   }
 }

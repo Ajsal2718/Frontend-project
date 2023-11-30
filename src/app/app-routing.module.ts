@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './shared/home/home.component';
 import { AllproductComponent } from './allproducts/allproduct.component';
 import { MenComponent } from './gender/men/men.component';
 import { WomenComponent } from './gender/women/women.component';
@@ -11,11 +10,13 @@ import { authGuard } from './guard/auth.guard';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { AdminUserComponent } from './admin/admin-user/admin-user.component';
+import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
+import { AddProductComponent } from './admin/add-product/add-product.component';
+import { EditPrdctsComponent } from './admin/edit-prdcts/edit-prdcts.component';
 
 
 const routes: Routes = [
-  {path:'home',component:HomeComponent},
-  {path:'', redirectTo:'home',pathMatch:'full'},
   {path:'allproduct',component:AllproductComponent},
   {path:'men',component:MenComponent},
   {path:'women',component:WomenComponent},
@@ -24,7 +25,11 @@ const routes: Routes = [
   {path:'view-product/:id',component:ViewProductComponent,canActivate:[authGuard]},
   {path:'cart-page',component:CartPageComponent},
   {path:'admin-login',component:AdminLoginComponent},
-  {path:'dashboard',component:DashboardComponent}
+  {path:'dashboard',component:DashboardComponent},
+  {path:'admin-users',component:AdminUserComponent},
+  {path:'admin-products',component:AdminProductsComponent},
+  {path:'add-product',component:AddProductComponent},
+  {path:'edit-product/:id',component:EditPrdctsComponent}
 ];
 
 @NgModule({

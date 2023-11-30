@@ -10,6 +10,7 @@ export class NavbarComponent implements OnInit{
   onremove : boolean = false;
   logout : boolean  = false;
   out = 'Logout';
+  sidenav: any;
   constructor(private serve:UserLoginService){ }
   ngOnInit(): void {
     this.onremove = this.serve.issignupcart;

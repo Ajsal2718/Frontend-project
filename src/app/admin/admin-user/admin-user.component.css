@@ -1,0 +1,9 @@
+.user-main {
+    padding: 30px;
+    width:100vw;
+}
+table,th,td{
+    min-width: 300px;
+    text-align: center;
+    /* margin-inline-start: 40%; */
+}

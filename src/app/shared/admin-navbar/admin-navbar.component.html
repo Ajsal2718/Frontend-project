@@ -1,9 +1,9 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="warn">
     <mat-toolbar-row>
         <button (click)="sidenav.toggle();" mat-icon-button>
             <mat-icon >menu</mat-icon>
         </button>
-        <h1>side nav</h1>
+        <h1>Navbar</h1>
     </mat-toolbar-row>
 </mat-toolbar>
     <mat-sidenav-container>
@@ -14,12 +14,13 @@
                 <a mat-list-item routerLink="/admin-products">Products</a>
                 <a mat-list-item routerLink="/add-product">Add products</a>
             </mat-nav-list>
-            <a style="text-decoration: none; color: black;" routerLink="/login">Back to Login page</a>
+            <a style="text-decoration: none; color: black;" routerLink="/admin-login">Back to Login page</a>
         </mat-sidenav>
         <mat-sidenav-content>
-            <div >
-                <router-outlet></router-outlet>
-                <h1>hello</h1>
+            <div style="height: 500px; width: 50px;">
+                
+                <!-- <h1>hello</h1> -->
             </div>
         </mat-sidenav-content>
     </mat-sidenav-container>
+    <router-outlet></router-outlet>

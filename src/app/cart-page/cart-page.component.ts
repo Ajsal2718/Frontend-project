@@ -25,6 +25,7 @@ stepUp(){
 stepDown(){
   this.pvalue--
 }
+
 updatePrice(){
   this.cartPrice = 0;
   this.totalQuantity = 0;

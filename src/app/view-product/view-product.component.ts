@@ -11,20 +11,18 @@ import { UserLoginService } from '../service/user-login.service';
 })
 export class ViewProductComponent implements OnInit{
   productdeteils : ProductModel[] = [];
-  relatedProduct:ProductModel[] = [];
-  id:number
-  constructor(private active:ActivatedRoute,private serv:FilterServiceService,private servUser:UserLoginService){ }
+  relatedProduct : ProductModel[] = [];
+  id:number;
+  constructor(private active:ActivatedRoute,private serv:FilterServiceService){ }
 
   ngOnInit(): void {
     let routeparam = this.active.snapshot.paramMap.get('id');
-    this.id = parseInt(routeparam)
+    this.id = parseInt(routeparam);
     console.log(routeparam);
     this.serv.viewProducts(parseInt(routeparam));
     this.productdeteils = this.serv.prdcts;
-    // this.relatedProduct = this.serv.relaPrdct;
-    // this.servUser.showSearch = false;
   }
   toCart(){
-    this.serv.cart(this.id)
+    this.serv.cart(this.id);
   }
 }
